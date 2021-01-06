@@ -1,10 +1,3 @@
-import faker from 'faker';
+import { mount } from './bootstrap';
 
-let products = '';
-
-for (let i = 0; i < 3; i++) {
-  products += `<div> ${faker.commerce.productName()} </div>`
-}
-
-console.log(products);
-document.getElementById('dev-products').innerHTML = products;
+mount(document.querySelector('#dev-products'))
